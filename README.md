@@ -1,5 +1,4 @@
-# ZZ通用组件 React实现
-## ZZLogic-React-Component
+# ZZLogic-React-Component
 
 * [x] ActionSheet 下方选择组件
 * [x] Carousel icon切换组件
