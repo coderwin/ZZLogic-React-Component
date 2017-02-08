@@ -1,0 +1,31 @@
+@import "../common.less";
+@-webkit-keyframes spinning {
+  0% {-webkit-transform: rotate(0deg)}
+  50% {-webkit-transform: rotate(100deg)}
+  100% {-webkit-transform: rotate(360deg)}
+}
+.zzrc-ls{
+  &-w{
+    text-align: center;
+    margin: 10*@px 0;
+    &-icon{
+      display: inline-block;
+      width: 30*@px;
+      height: 30*@px;
+      border-color: #ccc;
+      border-radius: 50%;
+      border-width: 6*@px;
+      border-style: solid;
+      border-bottom-color: transparent;
+      -webkit-animation: spinning 1s linear infinite;
+    }
+    &-text{
+      margin-left: 20*@px;
+      line-height: 40*@px;
+      font-size: 28*@px;
+      color: #444444;
+      position: relative;
+      top: -10*@px;
+    }
+  }
+}

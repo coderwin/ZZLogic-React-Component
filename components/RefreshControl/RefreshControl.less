@@ -1,0 +1,35 @@
+@import "../common.less";
+@-webkit-keyframes spinning {
+  0% {-webkit-transform: rotate(0deg)}
+  50% {-webkit-transform: rotate(100deg)}
+  100% {-webkit-transform: rotate(360deg)}
+}
+.zzrc-rc{
+  overflow: hidden;
+  //transform: translateY(-120*@px);
+  //margin-top: -120*@px;
+  //transform: translateZ(0);
+  &-w{
+    margin-top: -120*@px;
+    text-align: center;
+    height: 120*@px;
+    &-loading{
+      &-icon{
+        display: inline-block;
+        width: 50*@px;
+        height: 50*@px;
+        border-color: #ccc;
+        border-radius: 50%;
+        border-width: 6*@px;
+        border-style: solid;
+        border-bottom-color: transparent;
+        -webkit-animation: spinning 1s linear infinite;
+      }
+    }
+    &-text{
+      font-size: 28*@px;
+      overflow: auto;
+      font-color: #ccc;
+    }
+  }
+}

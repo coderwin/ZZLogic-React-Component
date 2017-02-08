@@ -1,0 +1,26 @@
+@import '../common.less';
+@import "../onepx.less";
+
+::-webkit-scrollbar {
+  display: none
+}
+.zzrc-tabrow{
+  font-size: 0;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.zzrc-tabrow-item:last-child{
+  .border-right(solid, #ccc);
+}
+.zzrc-tabrow-item{
+  display: inline-block;
+  padding: 10*@px 20*@px;
+  color: #333;
+  font-size: 28*@px;
+  text-align: center;
+  .border(solid, #ccc);
+  .border-right(solid, transparent);
+}
+
+

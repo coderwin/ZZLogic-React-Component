@@ -1,0 +1,27 @@
+@import "../common.less";
+.zzrc-tabbar{
+  display: flex;
+  flex-direction: row;
+}
+.zzrc-tabbar:last-child{
+  border-right: 1px solid #ccc;
+}
+.zzrc-tabbar-item{
+  color: #333;
+  font-size: 28*@px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 1px solid #ccc;
+  flex: 1;
+  border-right: 0;
+  text-align: center;
+  &-text{
+    display: inline-block;
+    margin-left: 20*@px;
+    //width: 100%;
+    //height: 100%;
+  }
+}
+
