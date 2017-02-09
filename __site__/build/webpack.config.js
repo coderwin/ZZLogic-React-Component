@@ -71,7 +71,7 @@ var config = {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV || 'development')
     }),
-    new webpack.optimize.OccurrenceOrderPlugin(),
+    // new webpack.optimize.OccurrenceOrderPlugin(),
     // new AssetsWebpackPlugin({
     //   filename: 'asset-manifest.json',
     //   path: DIST_PATH
@@ -88,10 +88,10 @@ var config = {
         )
       }
     }),
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'manifest',
-    //   chunks: ['vendor'],
-    // })
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+      chunks: ['vendor'],
+    })
   ]
 };
 
@@ -198,11 +198,11 @@ config.plugins.push(function() {
       
       // manifest in HTML
 
-      // Object.keys(compilation.assets).forEach(function(filename) {
-      //   if (/\/?manifest.[^\/]*js$/.test(filename)) {
-      //     manifest = compilation.assets[filename].source();
-      //   }
-      // });
+      Object.keys(compilation.assets).forEach(function(filename) {
+        if (/\/?manifest.[^\/]*js$/.test(filename)) {
+          manifest = compilation.assets[filename].source();
+        }
+      });
 
       var FM ='<script>' +flexable+manifest+ '<\/script>';
       // var HL ='<script>' +hairline+ '<\/script>';
