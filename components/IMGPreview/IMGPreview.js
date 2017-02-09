@@ -238,7 +238,7 @@ export default class Preview {
     })
   }
   close(){
-    document.body.removeChild(this._preview)
+    this._preview&&document.body.removeChild(this._preview)
     this._preview = null
     // this._preview.remove()
   }

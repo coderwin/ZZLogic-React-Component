@@ -11,7 +11,7 @@
     "test": "make test",
     "start": "npm run dev",
     "dev": "NODE_ENV=development node __site__/build/webpack.dev.js",
-    "release": "rm -f -r __site__/dist; NODE_ENV=production node __site__/build/webpack.release.js; rm -f ./__site__/dist/static/js/manifest.*.js",
+    "release": "rm -f -r site; NODE_ENV=production node __site__/build/webpack.release.js; rm -f ./site/static/js/manifest.*.js",
     "publish": "webpack --config ./webpack.publish.config.js"
   },
   "keywords": [
