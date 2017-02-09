@@ -220,7 +220,7 @@ export default class Preview {
     this._preview = document.createElement('div')
     document.body.appendChild(this._preview)
     props.nextTask = () => {
-      this.close()
+      this.close();
       props.callback&&props.callback()
     }
     render(<IMGPreview {...props} />, this._preview)
@@ -228,7 +228,7 @@ export default class Preview {
   }
   bindHashChange(){
     var hide = () => {
-      this.close()
+      this.close();
       ['hashchange', 'popstate'].map((event) => {
         window.removeEventListener(event, hide, false);
       })
